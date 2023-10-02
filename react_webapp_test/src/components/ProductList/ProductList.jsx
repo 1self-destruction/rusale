@@ -91,7 +91,6 @@ const ProductList = ({ searchQuery, addedItems, cartItems, updateCart, selectedC
     }
   }, [cartItems, tg.MainButton]);
 
-  // Фильтруем товары при изменении searchQuery и selectedCategory
   useEffect(() => {
     console.log('searchQuery:', searchQuery);
     console.log('selectedCategory:', selectedCategory);
@@ -103,8 +102,8 @@ const ProductList = ({ searchQuery, addedItems, cartItems, updateCart, selectedC
           return isMatchingTitle;
       } else {
           const isMatchingTag = Array.isArray(product.tags)
-              ? product.tags.includes(selectedCategory.toLowerCase()) // Приводим категорию к нижнему регистру
-              : product.tags === selectedCategory.toLowerCase(); // Приводим категорию к нижнему регистру
+              ? product.tags.includes(selectedCategory.toLowerCase())
+              : product.tags === selectedCategory.toLowerCase();
           return isMatchingTitle && isMatchingTag;
       }
   });
@@ -116,7 +115,7 @@ const ProductList = ({ searchQuery, addedItems, cartItems, updateCart, selectedC
 return (
   <div className={'list'}>
     {filteredProducts
-      .sort((a, b) => b.id - a.id) // Сортировка по убыванию id
+      .sort((a, b) => b.id - a.id)
       .map((item) => (
         <ProductItem
           product={item}

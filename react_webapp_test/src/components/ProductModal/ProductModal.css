@@ -8,13 +8,13 @@
   position: fixed;
   top: 0%;
   left: 0%;
-  width: 340px; /* Максимальная ширина модального окна, как в Cart */
-  height: 500px; /* Максимальная высота модального окна, как в Cart */
+  width: 340px;
+  height: 500px;
   z-index: 1300;
   flex: 1;
   max-width: 400px;
   max-height: 2432px;
-  font-family: 'Oswald', sans-serif; /* Используйте имя шрифта 'Oswald' здесь */
+  font-family: 'Oswald', sans-serif;
 }
 
 .product-modal.open {
@@ -23,35 +23,35 @@
 }
 
 .product-image {
-  max-width: 100%; /* Максимальная ширина изображения */
-  max-height: 100%; /* Максимальная высота изображения */
-  width: 90%; /* Добавляем эту строку для масштабируемости */
-  height: 70%; /* Добавляем эту строку для масштабируемости */
+  max-width: 100%;
+  max-height: 100%;
+  width: 90%;
+  height: 70%;
 }
 
 .close {
-  background-color: rgb(20, 19, 19); /* Цвет фона кнопки */
-  color: #fff; /* Цвет текста */
+  background-color: rgb(20, 19, 19);
+  color: #fff;
   border: none;
-  border-radius: 8px; /* Небольшой радиус скругления углов */
-  padding: 3px; /* Задаем отступы */
+  border-radius: 8px;
+  padding: 3px;
   cursor: pointer;
   transition: background-color 0.3s;
   height: 20px;
-  font-weight: bold; /* Добавляем жирный шрифт */
+  font-weight: bold;
 }
 
 .close:hover {
-  background-color: #cc3a1c; /* Цвет кнопки при наведении */
+  background-color: #cc3a1c;
 }
 
 
   .description {
-    max-height: 40px; /* Максимальная высота текста, после которой появится вертикальная прокрутка */
-    overflow-y: auto; /* Включаем вертикальную прокрутку при необходимости */
+    max-height: 40px;
+    overflow-y: auto;
 }
 
 .text_modal {
   font-size: 15px;
-  text-align: center; /* Центрировать текст по горизонтали */
+  text-align: center;
 }

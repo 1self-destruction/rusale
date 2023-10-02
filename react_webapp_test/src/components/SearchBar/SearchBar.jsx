@@ -64,7 +64,7 @@ const SearchBar = ({ onSearch, cartItems, openCart }) => {
                 isOpen={isMenuOpen}
                 selectedCategory={selectedCategory}
                 onCategorySelect={(category) => setSelectedCategory(category)}
-                onSearchByTag={(tag) => onSearch(searchQuery, tag)} // Передаем тег категории для поиска по тегам
+                onSearchByTag={(tag) => onSearch(searchQuery, tag)}
             />
         </div>
     );

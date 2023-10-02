@@ -1,19 +1,17 @@
-/* Header.css */
 .header {
     display: flex;
-    color: #666; /* Белый текст */
+    color: #666;
     position: fixed;
     top: 0;
     left: 5px;
     right: 0;
-    z-index: 999; /* Позиционирование над остальным контентом */
+    z-index: 999;
     max-width: 370px;
-    transition: transform 0.3s; /* Добавляем анимацию для свойства transform */
+    transition: transform 0.3s;
 }
 
-/* Стили для хедера, когда он "скрывается" вверх */
 .header.scrolled {
-    transform: translateY(-100%); /* Поднимаем Header вверх на 100% при скролле вниз */
+    transform: translateY(-100%);
 }
 .logo {
     width: 100%;

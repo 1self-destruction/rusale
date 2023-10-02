@@ -1,4 +1,3 @@
-// ProductModal.js
 import React from 'react';
 import './ProductModal.css';
 

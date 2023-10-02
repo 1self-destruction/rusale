@@ -20,8 +20,6 @@ const CategoryMenu = ({ isOpen, selectedCategory, onCategorySelect, onSearchByTa
 
     const handleCategoryClick = (category) => {
       onCategorySelect(category.tag.toLowerCase());
-      
-      // Передаем тег категории для поиска по тегам в нижнем регистре
       onSearchByTag(category.tag.toLowerCase());
   };
     

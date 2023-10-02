@@ -1,7 +1,7 @@
 .button {
     padding: 10px 15px;
-    background: #000; /* Черный фон */
-    color: #fff; /* Белый текст */
+    background: #000;
+    color: #fff;
     border: none;
     outline: none;
     cursor: pointer;
@@ -10,6 +10,6 @@
 }
 
 .button:hover {
-    background: #fff; /* Белый фон при наведении */
-    color: #000; /* Черный текст при наведении */
+    background: #fff;
+    color: #000;
 }

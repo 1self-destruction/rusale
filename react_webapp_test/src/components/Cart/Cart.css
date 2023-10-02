@@ -8,18 +8,18 @@
   background-color: #fff;
   padding: 20px;
   z-index: 1000;
-  width: 360px; /* Ширина корзины */
-  height: 500px; /* Максимальная высота корзины */
+  width: 360px;
+  height: 500px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   overflow: hidden;
   display: flex;
-  flex-direction: column; /* Чтобы контейнер растягивался по вертикали */
-  font-family: 'Oswald', sans-serif; /* Используйте имя шрифта 'Oswald' здесь */
+  flex-direction: column;
+  font-family: 'Oswald', sans-serif;
 }
 
 .cart-items-container {
-  flex: 1; /* Растягиваем этот контейнер, чтобы он занимал доступное пространство */
-  overflow-y: auto; /* Включаем вертикальную прокрутку для списка товаров */
+  flex: 1;
+  overflow-y: auto;
   max-height: 420px;
 }
 
@@ -36,8 +36,8 @@
 
 .cart-header h2 {
   margin: 0;
-  font-size: 24px; /* Размер шрифта надписи "Корзина" */
-  color: #333; /* Цвет надписи "Корзина" */
+  font-size: 24px;
+  color: #333;
 }
 
 .cart-item {
@@ -91,28 +91,28 @@
 }
 
 .close-button {
-  background-color: rgb(20, 19, 19); /* Цвет фона кнопки */
-  color: #fff; /* Цвет текста */
+  background-color: rgb(20, 19, 19);
+  color: #fff;
   border: none;
-  border-radius: 8px; /* Небольшой радиус скругления углов */
-  padding: 8px; /* Задаем отступы */
-  margin-left: auto; /* Выравниваем кнопку справа */
+  border-radius: 8px;
+  padding: 8px;
+  margin-left: auto;
   cursor: pointer;
   transition: background-color 0.3s;
   height: 30px;
 }
 
 .close-button:hover {
-  background-color: #cc3a1c; /* Цвет кнопки при наведении */
+  background-color: #cc3a1c;
 }
 
 .remove-button {
-  background-color: #000000; /* Цвет фона кнопки */
-  color: #fff; /* Цвет текста */
+  background-color: #000000;
+  color: #fff;
   border: none;
-  border-radius: 8px; /* Небольшой радиус скругления углов */
-  padding: 8px; /* Задаем отступы */
-  margin-left: auto; /* Выравниваем кнопку справа */
+  border-radius: 8px;
+  padding: 8px;
+  margin-left: auto;
   cursor: pointer;
   transition: background-color 0.3s;
   max-height: 32px;
@@ -120,7 +120,7 @@
 }
 
 .remove-button:hover {
-  background-color: #cc3a1c; /* Цвет кнопки при наведении */
+  background-color: #cc3a1c;
 }
 
 .remove-button svg {
@@ -134,7 +134,7 @@
   background-color: white;
   border: 1px solid black;
   padding: 2px;
-  border-radius: 10px; /* Закругляем углы */
+  border-radius: 10px;
 }
 
 .empty-cart-messageText {

@@ -5,7 +5,7 @@ import { Route, Routes } from 'react-router-dom';
 import ProductList from './components/ProductList/ProductList';
 import SearchBar from './components/SearchBar/SearchBar';
 import Cart from './components/Cart/Cart';
-import ProductModal from './components/ProductModal/ProductModal'; // Импортируйте компонент ProductModal
+import ProductModal from './components/ProductModal/ProductModal';
 
 function App() {
   const { onToggleButton, tg } = useTelegram();
@@ -64,14 +64,13 @@ function App() {
               cartItems={cartItems}
               updateCart={updateCart}
               openCart={openCart}
-              openProductModal={openProductModal} // Передаем функцию в ProductList
+              openProductModal={openProductModal}
               selectedCategory={selectedCategory}
             />
           }
         />
       </Routes>
       {isCartOpen && <Cart addedItems={addedItems} onClose={closeCart} updateCart={updateCart} />}
-      {/* Модальное окно */}
       {selectedProduct && (
         <ProductModal product={selectedProduct} onClose={closeProductModal} />
       )}

@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import Button from "../Button/Button";
 import { useTelegram } from "../../hooks/useTelegram";
 import './Header.css';
 
@@ -9,7 +8,6 @@ const Header = () => {
 
     useEffect(() => {
         const handleScroll = () => {
-            // Проверяем, сколько прокрутили от верха страницы
             if (window.scrollY > 0) {
                 setIsScrolled(true);
             } else {

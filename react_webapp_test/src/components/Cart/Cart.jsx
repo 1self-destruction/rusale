@@ -7,7 +7,7 @@ import { FaTimes, FaShoppingCart } from 'react-icons/fa';
 const Cart = ({ addedItems, onClose, updateCart }) => {
   const handleRemoveFromCart = (itemId) => {
     const newCart = addedItems.filter(item => item.id !== itemId);
-    updateCart(newCart); // Обновляем состояние корзины в ProductList
+    updateCart(newCart);
   };
 
   return (

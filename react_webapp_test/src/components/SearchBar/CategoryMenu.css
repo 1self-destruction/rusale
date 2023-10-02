@@ -1,30 +1,29 @@
-/* CategoryMenu.css */
 .category-menu {
     position: absolute;
     top: 100%;
     left: 0;
     display: flex;
     flex-direction: column;
-    background-color: #333; /* Серый фон */
+    background-color: #333;
     box-shadow: none;
     z-index: 999;
-    border-radius: 10px; /* Закругляем края */
+    border-radius: 10px;
 }
 
 .category-item {
-    padding: 12px; /* Увеличиваем отступы */
+    padding: 12px;
     background-color: transparent;
     cursor: pointer;
-    transition: background-color 0.3s, color 0.3s; /* Добавляем анимацию изменения цвета */
+    transition: background-color 0.3s, color 0.3s;
     font-size: 16px;
-    text-align: left; /* Выравнивание текста по левому краю */
-    color: #fff; /* Белый цвет текста */
-    border: none; /* Убираем границу */
-    outline: none; /* Убираем обводку при фокусе */
-    border-radius: 10px; /* Закругляем края */
+    text-align: left;
+    color: #fff;
+    border: none;
+    outline: none;
+    border-radius: 10px;
 }
 
 .category-item:hover {
-    background-color: #666; /* Темно-серый цвет при наведении */
-    color: #fff; /* Белый цвет текста при наведении */
+    background-color: #666;
+    color: #fff;
 }

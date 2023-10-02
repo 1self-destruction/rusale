@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Button from '../Button/Button';
 import './ProductItem.css';
-import { FaShoppingCart } from 'react-icons/fa'; // Подставьте правильный путь к компоненту значка корзины из вашей библиотеки
+import { FaShoppingCart } from 'react-icons/fa';
 import { FaTrash } from 'react-icons/fa';
 
 const ProductItem = ({ product, className, onAdd, isInCart, openModal }) => {
@@ -26,7 +26,6 @@ const ProductItem = ({ product, className, onAdd, isInCart, openModal }) => {
 
   const availableSizes = product.size.split(',').map((size) => size.trim());
 
-  // Проверяем наличие тега "sale" в product.tags
   const isOnSale = product.tags && product.tags.includes('sale');
 
   return (
