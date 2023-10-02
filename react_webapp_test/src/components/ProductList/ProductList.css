@@ -1,0 +1,13 @@
+.list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: #fff; /* Белый фон */
+    margin-top: 80px;
+    font-family: 'Oswald', sans-serif; /* Используйте имя шрифта 'Oswald' здесь */
+    max-width: 100%;
+}
+
+.item {
+    background: white; /* Черный фон */
+    color: #fff; /* Белый текст */
+}

@@ -1,0 +1,30 @@
+/* CategoryMenu.css */
+.category-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #333; /* Серый фон */
+    box-shadow: none;
+    z-index: 999;
+    border-radius: 10px; /* Закругляем края */
+}
+
+.category-item {
+    padding: 12px; /* Увеличиваем отступы */
+    background-color: transparent;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* Добавляем анимацию изменения цвета */
+    font-size: 16px;
+    text-align: left; /* Выравнивание текста по левому краю */
+    color: #fff; /* Белый цвет текста */
+    border: none; /* Убираем границу */
+    outline: none; /* Убираем обводку при фокусе */
+    border-radius: 10px; /* Закругляем края */
+}
+
+.category-item:hover {
+    background-color: #666; /* Темно-серый цвет при наведении */
+    color: #fff; /* Белый цвет текста при наведении */
+}

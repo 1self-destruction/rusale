@@ -1,0 +1,145 @@
+/* Cart.css */
+
+.cart-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  z-index: 1000;
+  width: 360px; /* Ширина корзины */
+  height: 500px; /* Максимальная высота корзины */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column; /* Чтобы контейнер растягивался по вертикали */
+  font-family: 'Oswald', sans-serif; /* Используйте имя шрифта 'Oswald' здесь */
+}
+
+.cart-items-container {
+  flex: 1; /* Растягиваем этот контейнер, чтобы он занимал доступное пространство */
+  overflow-y: auto; /* Включаем вертикальную прокрутку для списка товаров */
+  max-height: 420px;
+}
+
+.cart-items {
+  list-style: none;
+  padding: 0;
+}
+
+.cart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cart-header h2 {
+  margin: 0;
+  font-size: 24px; /* Размер шрифта надписи "Корзина" */
+  color: #333; /* Цвет надписи "Корзина" */
+}
+
+.cart-item {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.cart-item-thumbnail {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  overflow: hidden;
+}
+
+.cart-item-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cart-item-details {
+  flex: 1;
+}
+
+.cart-item-title {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.cart-items button {
+  background-color: black;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.cart-button {
+  background-color: black;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  margin-left: 7px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 16px;
+}
+
+.cart-button:hover {
+  background-color: #cc3a1c;
+}
+
+.close-button {
+  background-color: rgb(20, 19, 19); /* Цвет фона кнопки */
+  color: #fff; /* Цвет текста */
+  border: none;
+  border-radius: 8px; /* Небольшой радиус скругления углов */
+  padding: 8px; /* Задаем отступы */
+  margin-left: auto; /* Выравниваем кнопку справа */
+  cursor: pointer;
+  transition: background-color 0.3s;
+  height: 30px;
+}
+
+.close-button:hover {
+  background-color: #cc3a1c; /* Цвет кнопки при наведении */
+}
+
+.remove-button {
+  background-color: #000000; /* Цвет фона кнопки */
+  color: #fff; /* Цвет текста */
+  border: none;
+  border-radius: 8px; /* Небольшой радиус скругления углов */
+  padding: 8px; /* Задаем отступы */
+  margin-left: auto; /* Выравниваем кнопку справа */
+  cursor: pointer;
+  transition: background-color 0.3s;
+  max-height: 32px;
+  font-size: 18px;
+}
+
+.remove-button:hover {
+  background-color: #cc3a1c; /* Цвет кнопки при наведении */
+}
+
+.remove-button svg {
+  width: 16px;
+  height: 16px;
+  fill: #fff;
+}
+
+.priceCart {
+  margin-left: 210px;
+  background-color: white;
+  border: 1px solid black;
+  padding: 2px;
+  border-radius: 10px; /* Закругляем углы */
+}
+
+.empty-cart-messageText {
+  margin-left: 80px;
+  margin-top: 105px;
+  font-size: 30px;
+  color: lightgray;
+}

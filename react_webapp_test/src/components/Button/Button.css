@@ -1,0 +1,15 @@
+.button {
+    padding: 10px 15px;
+    background: #000; /* Черный фон */
+    color: #fff; /* Белый текст */
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.button:hover {
+    background: #fff; /* Белый фон при наведении */
+    color: #000; /* Черный текст при наведении */
+}

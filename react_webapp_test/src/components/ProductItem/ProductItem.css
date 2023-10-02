@@ -1,0 +1,89 @@
+.product {
+  display: flex; /* Используем flex-контейнер для размещения элементов внутри карточки */
+  flex-direction: column; /* Устанавливаем направление flex-контейнера на вертикальное */
+  width: 175px;
+  text-align: center;
+  background: #fff;
+  color: #000;
+  transition: transform 0.3s;
+  margin-top: 20px;
+  font-family: 'Oswald', sans-serif; /* Используйте имя шрифта 'Oswald' здесь */
+}
+
+.product:hover {
+  transform: translateY(-5px);
+}
+
+.product-image {
+  width: 160px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px 10px 10px 0;
+  transform: scale(1.0);
+  transition: transform 0.3s;
+  object-fit: contain; /* Используем "contain" для сохранения пропорций и умещения изображения */
+  margin-left: 8px;
+}
+
+.price {
+  font-size: 18px;
+  margin-top: auto; /* Оставляем верхний отступ авто, чтобы элементы ниже поднимались вниз */
+  color: #000;
+}
+
+.size-buttons {
+  margin-top: 10px; /* Добавляем верхний отступ для размеров */
+}
+
+.size-button {
+  background-color: white;
+  color: black;
+  margin: 2px;
+  padding: 5px 10px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.size-button.selected {
+  background-color: black;
+  color: white;
+}
+
+.size-button.in-cart {
+  text-decoration: line-through;
+  cursor: not-allowed;
+  background-color: #ccc;
+  color: #666;
+}
+
+.size-button.in-cart.selected {
+  text-decoration: none;
+}
+
+.add-btn,
+.remove-btn {
+  margin: 10px auto; /* Центрирование по горизонтали с автоматическим верхним и нижним отступом */
+  border-radius: 0 0 10px 10px; /* Закругление нижних углов кнопки */
+  background-color: black;
+  width: 90px;
+  display: block; /* Делаем кнопки блочными элементами, чтобы ширина была по содержимому */
+}
+
+
+.product:nth-child(even) {
+  margin-right: 0;
+}
+
+.size-button.disabled-size {
+  display: none;
+}
+
+.saleprice {
+  color: red;
+}
+
+.title {
+  font-weight: bold;
+  color: #444;
+}

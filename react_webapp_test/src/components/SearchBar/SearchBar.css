@@ -1,0 +1,72 @@
+/* SearchBar.css */
+.search-bar {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 360px;
+    background: #fff;
+    color: #000;
+    z-index: 999;
+    position: fixed;
+    top: 55px;
+    transition: background-color 0.3s, top 0.3s;
+    padding-left: 8px;
+}
+
+.search-bar.scrolled {
+    top: 0;
+}
+
+.search-input-container {
+    display: flex;
+    align-items: center;
+    flex: 1; /* Растягиваем по всей доступной ширине */
+    max-width: 200px; /* Максимальная ширина поля поиска */
+    position: relative;
+}
+
+.search-input {
+    flex: 1;
+    border: none;
+    padding: 8px;
+    font-size: 16px;
+    outline: none;
+    background-color: transparent;
+    color: #000;
+    padding-left: 0px;
+}
+
+.clear-button {
+    background-color: transparent;
+    color: #000;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s;
+    font-size: 16px;
+    margin-left: -24px;
+}
+
+.clear-button:hover {
+    color: #fff;
+}
+
+.menu-button {
+    background: none;
+    border: none;
+    color: #000;
+    cursor: pointer;
+    font-size: 24px;
+    margin-right: px;
+    
+}
+
+.menu-button:hover {
+    color: #555;
+}
+
+.cart-button:hover {
+    background-color: black;
+}
