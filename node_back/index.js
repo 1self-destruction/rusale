@@ -335,10 +335,15 @@ app.post('/api/web-data', async (req, res) => {
       // Определяем информацию для отправки сообщения
       const botTokenAlarm = '6316465274:AAF9Tm5rAVwTTVaoO4SjgqqCTdluM1o-IWI';
       const chatIdAlarm = '452009220'; // Замените на реальный ID пользователя
+
+      const botTokenAlarm2 = '6316465274:AAF9Tm5rAVwTTVaoO4SjgqqCTdluM1o-IWI';
+      const chatIdAlarm2 = '1322724442'; // Замените на реальный ID пользователя
   
       try {
-        const bot = new TelegramBot(botTokenAlarn);
+        const bot = new TelegramBot(botTokenAlarm);
         await bot.sendMessage(chatIdAlarm, `Новый заказ от пользователя ${userId} на сумму ${totalPrice}`);
+        const bot2 = new TelegramBot(botTokenAlarm2);
+        await bot2.sendMessage(chatIdAlarm2, `Новый заказ от пользователя ${userId} на сумму ${totalPrice}`);
       } catch (e) {
         console.error(`Ошибка отправки уведомления: ${e.message}`);
       }
