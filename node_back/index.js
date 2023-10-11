@@ -327,10 +327,21 @@ app.post('/api/web-data', async (req, res) => {
     totalPrice: totalPrice,
   };
 
-  await addOrder(order, (err) => {
+  await addOrder(order, async (err) => {
     if (err) {
       const errorMessage = `Error adding order: ${err}`;
       logger.error(errorMessage);
+    } else {
+      // Определяем информацию для отправки сообщения
+      const botTokenAlarm = '6316465274:AAF9Tm5rAVwTTVaoO4SjgqqCTdluM1o-IWI';
+      const chatIdAlarm = '452009220'; // Замените на реальный ID пользователя
+  
+      try {
+        const bot = new TelegramBot(botTokenAlarn);
+        await bot.sendMessage(chatIdAlarm, `Новый заказ от пользователя ${userId} на сумму ${totalPrice}`);
+      } catch (e) {
+        console.error(`Ошибка отправки уведомления: ${e.message}`);
+      }
     }
   });
 
@@ -340,7 +351,7 @@ app.post('/api/web-data', async (req, res) => {
       id: queryId,
       title: 'Успешная покупка',
       input_message_content: {
-        message_text: ` Поздравляю с покупкой, вы приобрели товар на сумму ${totalPrice}, ${products.map(item => item.title).join(', ')}`
+        message_text: ` Поздравляю с покупкой, в ближайшее время с вами свяжется менеджер https://t.me/ruussx. Вы приобрели товар на сумму ${totalPrice}, ${products.map(item => item.title).join(', ')}`
       }
     });
     return res.status(200).json({});
