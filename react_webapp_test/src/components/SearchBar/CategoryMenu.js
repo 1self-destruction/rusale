@@ -7,6 +7,7 @@ const CategoryMenu = ({ isOpen, selectedCategory, onCategorySelect, onSearchByTa
         { label: 'Футболки', tag: 'tee' },
         { label: 'Штаны', tag: 'pants' },
         { label: 'Худи', tag: 'hoodie' },
+        { label: 'Свитера', tag: 'sweater' },
         { label: 'Куртки', tag: 'jacket' },
         { label: 'Обувь', tag: 'shoes'},
         { label: 'Аксессуары', tag: 'accs'},
