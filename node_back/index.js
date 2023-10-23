@@ -122,37 +122,37 @@ bot.on('message', async (msg) => {
     bot.sendMessage(chatId, 'Добавьте номер заказа');
   }
 
-  if (text.startsWith('/delete ')) {
-    const nickname = msg.from.username
-    const parts = text.split(' ');
-    if (parts.length === 2 && parts[0] === '/delete') {
-      const orderId = parseInt(parts[1]); // Преобразуем текст в число
+  // if (text.startsWith('/delete ')) {
+  //   const nickname = msg.from.username
+  //   const parts = text.split(' ');
+  //   if (parts.length === 2 && parts[0] === '/delete') {
+  //     const orderId = parseInt(parts[1]); // Преобразуем текст в число
   
-      // Проверяем, совпадает ли ник пользователя с ником в заказе
-      isUserAuthorizedForOrder(nickname, orderId, (err, isAuthorized) => {
-        if (err) {
-          logger.error('Error checking user authorization:', err);
-          bot.sendMessage(chatId, 'Ошибка. Обратитесь в поддержку');
-        } else {
-          if (isAuthorized) {
-            // Обновляем статус заказа на "Cancelled"
-            updateOrderStatus(orderId, 'Cancelled', (err) => {
-              if (err) {
-                logger.error('Error updating order status:', err);
-                bot.sendMessage(chatId, 'Ошибка. Обратитесь в поддержку');
-              } else {
-                bot.sendMessage(chatId, `Заказ #${orderId} успешно отменен.`);
-              }
-            });
-          } else {
-            bot.sendMessage(chatId, 'Ошибка. Обратитесь в поддержку');
-          }
-        }
-      });
-    } else {
-      bot.sendMessage(chatId, 'Неверный формат команды. Используйте: /delete <номер заказа>');
-    }
-  }
+  //     // Проверяем, совпадает ли ник пользователя с ником в заказе
+  //     isUserAuthorizedForOrder(nickname, orderId, (err, isAuthorized) => {
+  //       if (err) {
+  //         logger.error('Error checking user authorization:', err);
+  //         bot.sendMessage(chatId, 'Ошибка. Обратитесь в поддержку');
+  //       } else {
+  //         if (isAuthorized) {
+  //           // Обновляем статус заказа на "Cancelled"
+  //           updateOrderStatus(orderId, 'Cancelled', (err) => {
+  //             if (err) {
+  //               logger.error('Error updating order status:', err);
+  //               bot.sendMessage(chatId, 'Ошибка. Обратитесь в поддержку');
+  //             } else {
+  //               bot.sendMessage(chatId, `Заказ #${orderId} успешно отменен.`);
+  //             }
+  //           });
+  //         } else {
+  //           bot.sendMessage(chatId, 'Ошибка. Обратитесь в поддержку');
+  //         }
+  //       }
+  //     });
+  //   } else {
+  //     bot.sendMessage(chatId, 'Неверный формат команды. Используйте: /delete <номер заказа>');
+  //   }
+  // }
 
   if (msg?.web_app_data?.data) {
     try {
