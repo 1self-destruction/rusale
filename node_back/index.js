@@ -75,7 +75,7 @@ bot.on('message', async (msg) => {
   const text = msg.text;
 
   if (text === '/start') {
-    await bot.sendMessage(chatId, 'Заходи в наш интернет магазин.');
+    await bot.sendMessage(chatId, 'RUSALE (https://taplink.cc/rusalestore) - магазин уличной культуры и стиля, более 300 оригинальных позиций в наличии и 150 отзывов о нас');
     await bot.sendMessage(chatId, '/help - помощь');
   }
 
@@ -83,7 +83,6 @@ bot.on('message', async (msg) => {
     await bot.sendMessage(chatId, 'Добавить товары к корзину и сделать заказ можно через приложение');
     await bot.sendMessage(chatId, 'В течении 5 минут после создания заказа с вами свяжется наш менеджер');
     await bot.sendMessage(chatId, '/orders - показать текущие заказы');
-    await bot.sendMessage(chatId, '/delete 1 - отменить заказ по ID');
     await bot.sendMessage(chatId, '/help - помощь');
   }
 
@@ -117,42 +116,6 @@ bot.on('message', async (msg) => {
       
     });
   }
-
-  if (text === '/delete') {
-    bot.sendMessage(chatId, 'Добавьте номер заказа');
-  }
-
-  // if (text.startsWith('/delete ')) {
-  //   const nickname = msg.from.username
-  //   const parts = text.split(' ');
-  //   if (parts.length === 2 && parts[0] === '/delete') {
-  //     const orderId = parseInt(parts[1]); // Преобразуем текст в число
-  
-  //     // Проверяем, совпадает ли ник пользователя с ником в заказе
-  //     isUserAuthorizedForOrder(nickname, orderId, (err, isAuthorized) => {
-  //       if (err) {
-  //         logger.error('Error checking user authorization:', err);
-  //         bot.sendMessage(chatId, 'Ошибка. Обратитесь в поддержку');
-  //       } else {
-  //         if (isAuthorized) {
-  //           // Обновляем статус заказа на "Cancelled"
-  //           updateOrderStatus(orderId, 'Cancelled', (err) => {
-  //             if (err) {
-  //               logger.error('Error updating order status:', err);
-  //               bot.sendMessage(chatId, 'Ошибка. Обратитесь в поддержку');
-  //             } else {
-  //               bot.sendMessage(chatId, `Заказ #${orderId} успешно отменен.`);
-  //             }
-  //           });
-  //         } else {
-  //           bot.sendMessage(chatId, 'Ошибка. Обратитесь в поддержку');
-  //         }
-  //       }
-  //     });
-  //   } else {
-  //     bot.sendMessage(chatId, 'Неверный формат команды. Используйте: /delete <номер заказа>');
-  //   }
-  // }
 
   if (msg?.web_app_data?.data) {
     try {
