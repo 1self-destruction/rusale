@@ -75,8 +75,10 @@ bot.on('message', async (msg) => {
   const text = msg.text;
 
   if (text === '/start') {
-    await bot.sendMessage(chatId, 'RUSALE (https://taplink.cc/rusalestore) - магазин уличной культуры и стиля, более 300 оригинальных позиций в наличии и 150 отзывов о нас');
+    await bot.sendMessage(chatId, '/start');
+    await bot.sendMessage(chatId, 'Добро пожаловать в RUSALE (https://t.me/russsale)\nTelegram-приложение от команды RUSALE (https://taplink.cc/rusalestore)\n-Только оригинал ассортимент\n- Более 300 вещей в наличии\n- 200 положительных отзывов о нас');
     await bot.sendMessage(chatId, '/help - помощь');
+    await bot.sendPhoto(chatId, 'https://sun9-58.userapi.com/impg/Z-jfttPHy9B1wxh3yBmVGsc9n7E59MGegup8tg/9CpnfmsivOQ.jpg?size=1139x552&quality=95&sign=5ebb0b1da5898782406adc109d903e24&type=album')
   }
 
   if (text === '/help') {
@@ -84,6 +86,8 @@ bot.on('message', async (msg) => {
     await bot.sendMessage(chatId, 'В течении 5 минут после создания заказа с вами свяжется наш менеджер');
     await bot.sendMessage(chatId, '/orders - показать текущие заказы');
     await bot.sendMessage(chatId, '/help - помощь');
+    await bot.sendMessage(chatId, '/start');
+    await bot.sendPhoto(chatId, 'https://sun9-58.userapi.com/impg/Z-jfttPHy9B1wxh3yBmVGsc9n7E59MGegup8tg/9CpnfmsivOQ.jpg?size=1139x552&quality=95&sign=5ebb0b1da5898782406adc109d903e24&type=album')
   }
 
 
