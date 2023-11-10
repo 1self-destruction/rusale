@@ -307,9 +307,9 @@ app.post('/api/web-data', async (req, res) => {
   
       try {
         const bot = new TelegramBot(botTokenAlarm);
-        await bot.sendMessage(chatIdAlarm, `Новый заказ от пользователя ${userId} на сумму ${totalPrice} Товары: ${products}`);
+        await bot.sendMessage(chatIdAlarm, `Новый заказ от пользователя ${userId} на сумму ${totalPrice} Товары: ${products.map(item => item.title).join('; ')}`);
         const bot2 = new TelegramBot(botTokenAlarm2);
-        await bot2.sendMessage(chatIdAlarm2, `Новый заказ от пользователя ${userId} на сумму ${totalPrice} Товары: ${products}`);
+        await bot2.sendMessage(chatIdAlarm2, `Новый заказ от пользователя ${userId} на сумму ${totalPrice} Товары: ${products.map(item => item.title).join('; ')}`);
       } catch (e) {
         console.error(`Ошибка отправки уведомления: ${e.message}`);
       }
