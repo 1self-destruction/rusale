@@ -76,7 +76,7 @@ bot.on('message', async (msg) => {
 
   if (text === '/start') {
     await bot.sendMessage(chatId, '/start');
-    await bot.sendMessage(chatId, 'Добро пожаловать в [RUSALE](https://t.me/russsale)\nTelegram-приложение от команды [RUSALE](https://taplink.cc/rusalestore)\n-Только оригинал ассортимент\n- Более 300 вещей в наличии\n- 200 положительных отзывов о нас');
+    await bot.sendMessage(chatId, 'Добро пожаловать в [RUSALE](https://t.me/russsale)\nTelegram-приложение от команды [RUSALE](https://taplink.cc/rusalestore)\n-Только оригинал ассортимент\n- Более 300 вещей в наличии\n- 200 положительных отзывов о нас', { parse_mode: 'Markdown' });
     await bot.sendMessage(chatId, '/help - помощь');
     await bot.sendPhoto(chatId, 'https://sun9-58.userapi.com/impg/Z-jfttPHy9B1wxh3yBmVGsc9n7E59MGegup8tg/9CpnfmsivOQ.jpg?size=1139x552&quality=95&sign=5ebb0b1da5898782406adc109d903e24&type=album')
   }
