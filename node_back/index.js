@@ -21,6 +21,7 @@ const corsOptions = {
     'https://enchanting-fox-9cc04d.netlify.app',
     'http://localhost',
     'http://193.57.138.13',
+    'http://46.39.51.68',
   ],
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   optionsSuccessStatus: 204,
